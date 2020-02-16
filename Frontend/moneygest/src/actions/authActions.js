@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { toastr } from 'react-redux-toastr'
+
 import consts from '../consts';
 
 function submit(values, url) {
@@ -7,12 +9,15 @@ function submit(values, url) {
             .then(resp => {
                 let json = { ...resp.data, logged: true}
                 localStorage.setItem('_moneygest_user', JSON.stringify(json))
+                console.log(resp.data)
                 dispatch([
                     { type: 'USER_FETCHED', payload: resp.data },
-                    
                 ])
             })
-            .catch(e => console.error(e))
+            .catch(e => (e.response.data.errors).forEach(error=>{
+                console.log(error)
+                toastr.error('Erro', error)
+            }))
     }
 }
 

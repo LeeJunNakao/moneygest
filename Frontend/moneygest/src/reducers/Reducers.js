@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import {reducer as toastrReducer} from 'react-redux-toastr'
 
 import authReducer from './authReducer'
 import stockReducers from './stockReducers'
@@ -9,5 +10,6 @@ export default combineReducers({
     auth: authReducer,
     stock: stockReducers,
     app: appReducer,
-    body: bodyReducer
+    body: bodyReducer,
+    toastr: toastrReducer
 });
