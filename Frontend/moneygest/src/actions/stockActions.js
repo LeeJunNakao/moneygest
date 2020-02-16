@@ -2,7 +2,13 @@
 import URL from '../consts'
 import request from '../utils/request'
 
-let token = JSON.parse(localStorage.getItem('_moneygest_user')).token
+let token;
+if(localStorage.getItem('_moneygest_user')){
+    token = JSON.parse(localStorage.getItem('_moneygest_user')).token
+}else{
+    token =''
+}
+
 
 export function getStock(){
     return request(`${URL.API}/stock`,'get','GET_STOCKS', token)
