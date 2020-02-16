@@ -1,0 +1,338 @@
+body{
+  height: 100%;
+  min-height: 100vh;
+}
+.button{
+  border: 2px solid rgba(115, 115, 211, 1)!important;
+  width: 80px!important;
+  height: 30px;
+  background-color: white;
+
+
+} 
+.header-site{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(115, 115, 211, 1);
+  height: 70px;
+}
+
+.header-logo{
+  color: white;
+  font-size: 30px;
+  font-family: 'Oxygen', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.header-logo:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.header-info{
+  height: 70px;
+  line-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.header-image{
+  line-height: 70px;
+  border-radius: 35px;
+  background-image: url("./assets//images/avatar.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+}
+.header-name{
+  margin: 0 20px 0 20px;
+}
+
+.central-container{
+  height: 100%;
+  display: flex;
+}
+
+.nav-menu{
+  background-color: rgba(150,150,150,1);
+  width: 70px;
+  min-height: 100vh;
+  transition: linear 0.5s;
+  overflow: hidden;
+}
+
+.nav-menu:hover{
+  width: 220px;
+}
+
+.menu-item{
+  display: flex;
+  height: 50px;;
+  align-items: center;
+}
+.menu-item:hover{
+  background-color: rgba(200,200,200,1);
+  cursor: pointer;
+}
+
+.item-image{
+  margin: 0px 20px 0 10px;
+}
+
+.item-description{
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  color: white;
+}
+
+.main{
+  background-color: rgba(185, 185, 233, 1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.login-form{
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(241, 245, 249, 1);
+}
+
+.login-box{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  justify-self: center;
+  align-self: center;
+  background-color: rgba(181, 203, 247, 1);
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login-input{
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.login-submit{
+  width: 80px;
+  height: 40px;
+  background-color: rgba(43, 106, 233, 1);
+  border: 1px solid rgba(43, 106, 233, 0.5);
+  border-radius: 5px;
+  color: white;
+}
+
+.login-title{
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: rgba(43, 176, 23, 1);
+  text-shadow: 1px 0px 0px white, 
+  -1px 0px 0px white, 
+  0px 1px 0px white, 
+  0px -1px 0px white;
+}
+
+.login-subtitle{
+  margin-bottom: 20px;
+}
+
+.login-box a{
+  margin-top: 10px;
+}
+
+.home-container{
+  display: flex;
+  justify-content: center;
+}
+
+.home-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  justify-self: center;
+}
+
+.stock-item{
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  background-color: rgba(37, 248, 108, 0.8);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(7, 213, 75, 0.88);
+  background-image: url("./assets/images/stocks2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.item-title{
+  flex: 1;
+  font-size: 25px;
+  text-align: center;
+}
+
+.separador{
+  width: 100%;
+  height: 1px;
+  background-color: rgba(250,250,250,0.5);
+}
+
+
+
+.stock-description{
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.stock-name {
+  font-size: 20px;
+  padding-left: 15px
+}
+
+.stock-total{
+  font-size: 20px;
+  padding-right: 15px;
+
+}
+
+table{
+  background-color: white ;
+  border-spacing: 0;
+  margin-top: 20px;
+}
+.table-head{
+  background-color: black;
+  color: white;
+}
+
+.th{
+  width: 100px;
+}
+
+.table td{
+  text-align: center;
+}
+
+.tbody tr:nth-child(2n){
+  background-color: rgba(226,226,226,1);
+}
+
+.stocks-form{
+  
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.stocks-form input{
+  width: 200px;
+  height: 30px;
+   margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(115, 115, 211, 1)
+}
+
+.stocks-form input[type='submit']{
+  margin: 0 0 0 10px;
+}
+
+.stocks-form select{
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(115, 115, 211, 1)
+}
+
+.stocks-form option{
+  height: 100%;
+}
+
+.stocks-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.table{
+
+}
+
+@media (max-width:700px){
+  main{
+    min-height: 100vh;
+  }
+  .central-container{
+    flex-direction: column;
+  }
+  .nav-menu{
+    width: 100%;
+    display: flex;
+    height: 70px;
+    min-height: auto;
+    justify-content: center;
+  }
+  .nav-menu:hover{
+    width: 100%;
+    
+  }
+  .menu-item{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-image{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+
+  }
+  .item-description{
+    font-size: 15px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .stocks-container div{
+    width: 100%;
+  }
+  .stocks-form{
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+  }
+  .stocks-form input{
+    width: 80%;
+  }
+
+  .stocks-form select{
+    width: 80%;
+    align-self: flex-start;
+  }
+
+  .home-container{
+    flex-direction: column;
+    justify-content: center;
+  }
+}

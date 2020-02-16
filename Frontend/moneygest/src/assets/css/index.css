@@ -1,0 +1,87 @@
+body{
+    height: 100%;
+    min-height: 100vh;
+}
+
+.header-site{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(11, 106, 249, 1);
+    height: 70px;
+}
+
+.header-logo{
+    color: white;
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+    height: 70px;
+    line-height: 70px;
+    margin-left: 15px;
+
+}
+
+.header-logo:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.header-info{
+    height: 70px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header-image{
+    line-height: 70px;
+    border-radius: 35px;
+    background-image: url("../images/avatar.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.header-name{
+    margin: 0 20px 0 20px;
+}
+
+.central-container{
+    height: 100%;
+    display: flex;
+}
+
+.nav-menu{
+    background-color: rgba(150,150,150,1);
+    width: 70px;
+    min-height: 100vh;
+    transition: linear 0.5s;
+    overflow: hidden;
+}
+
+.nav-menu:hover{
+    width: 220px;
+}
+
+.menu-item{
+    display: flex;
+    height: 50px;;
+    align-items: center;
+}
+.menu-item:hover{
+    background-color: rgba(200,200,200,1);
+    cursor: pointer;
+}
+
+.item-image{
+    margin: 0px 20px 0 10px;
+}
+
+.item-description{
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.main{
+    background-color: rgba(124, 124, 248, 1);
+    width: 100%;
+}
