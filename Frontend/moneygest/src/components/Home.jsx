@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getSummary } from '../actions/stockActions'
@@ -14,9 +13,6 @@ class Home extends Component {
         this.props.getSummary()
     }
 
-    componentWillUnmount(){
-        console.log('home destruido')
-    }
 
     request() {
             let list = this.props.stockSummary.map(item => (

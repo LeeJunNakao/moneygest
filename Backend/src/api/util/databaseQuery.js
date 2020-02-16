@@ -3,15 +3,25 @@ const env = require('../../.env');
 const defineUser = require('./defineUser')
 
 class DbQuery{
-    constructor(parameters){
-        this.parameters = parameters;
+    constructor(req){
+        this.token = req.headers.token || req.query.token;
+        this.defineID()
+            .then(id=>this.id=id)
+            .catch(e=>console.log(e))
+    }
+
+    defineID(){
+        return new Promise((resolve,reject)=>{
+           defineUser(this.token)
+            .then(id=>resolve(id))
+            .catch(err=>reject(err))
+        })
     }
 
     async find(collection, parameter={} ){
-
-        this.id = await defineUser(this.parameters['token'])
+        this.id = await defineUser(this.token)
         return new Promise((resolve,reject)=>{
-            
+        
             collection.find({...parameter, user: this.id})
                 .sort({date: 1})
                 .exec((err,res)=>{
@@ -26,7 +36,7 @@ class DbQuery{
     }
 
     async include(Collection, parameter){
-        this.id = await defineUser(this.parameters['token'])
+        this.id = await defineUser(this.token)
         return new Promise((resolve,reject)=>{
             let attr = { ...parameter, user: this.id }
             let total = (attr.value * attr.quantity).toFixed(2)
@@ -40,12 +50,12 @@ class DbQuery{
     }
 
     async delete(Collection, _id){
-        this.id = await defineUser(this.parameters['token']);
+        this.id = await defineUser(this.token);
         return new Promise((resolve,reject)=>{
             Collection.deleteOne({ user: this.id, _id }, err=>{
                 reject(err)
             })
-            resolve('ok')
+            resolve('Deletado!')
 
         })
     }

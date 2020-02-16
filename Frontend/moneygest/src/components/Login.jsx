@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
+
 import { login, changeEmail, changePassword, registerHandler, register } from '../actions/authActions';
 import If from './If'
+import submitForm from '../utils/submitForm'
 
 class AuthManager extends Component {
 
@@ -11,30 +13,13 @@ class AuthManager extends Component {
         this.registerHand = this.registerHand.bind(this);
     }
     componentDidMount() {
-        let form = document.getElementById('form');
-        try{
-            form.addEventListener('submit', event => {
-                event.preventDefault();
-    
-                let json = {};
-                let elementos = event.target.elements;
-                [...elementos].forEach(el => {
-                    if (el['name']) {
-                        json[el.name] = el.value
-                    }
-                });
-                if(this.props.registerForm){
-                    this.props.register(json)
-                }else{
-                    this.props.login(json);
-                   
-                }
-                
-            })
-        }catch(e){
-            return false
-        }
-
+        submitForm('#form',(json)=>{
+            if(this.props.registerForm){
+                this.props.register(json)
+            }else{
+                this.props.login(json)
+            }
+        })
     }
 
     registerHand() {
@@ -46,7 +31,6 @@ class AuthManager extends Component {
     render() {
         return (
             <main>
-           
             <form role="form" id="form" className="login-form">
                 <div className="login-box">
                     <div className="login-title">MoneyGest</div>

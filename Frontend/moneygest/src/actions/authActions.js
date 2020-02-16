@@ -34,7 +34,7 @@ export function register(values) {
 }
 
 export function logout() {
-    return { type: 'LOGGED_OUT', payload: false }
+    return { type: 'LOGGED_OUT' }
 }
 
 export function changeEmail(event) {

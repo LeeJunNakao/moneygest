@@ -34,7 +34,6 @@ class Index extends Component {
     }
 
     render() {
-        
         return (
             [this.teste()]
         )
@@ -44,8 +43,6 @@ class Index extends Component {
 const mapStateToProps =  (state) => ({
     validToken: state.auth.validToken
 })
-
 const mapDispatchToProps = dispatch => bindActionCreators({ validateToken }, dispatch)
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index)

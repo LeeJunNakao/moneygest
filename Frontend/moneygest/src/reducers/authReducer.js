@@ -36,6 +36,9 @@ export default (state=INITIAL_STATE, action)=>{
 
         case 'SET_NAME':
             return {...state, username: action.payload}
+        
+        case 'LOGGED_OUT':
+            return { ...state, logged: false}
 
         default:
             return state;

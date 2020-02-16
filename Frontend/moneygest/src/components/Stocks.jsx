@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { getStock, submitStock } from '../actions/stockActions'
-import teste from '../actions/teste'
+import submitForm from '../utils/submitForm'
 
 class Stocks extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class Stocks extends Component {
 
     componentDidMount(){
         this.props.getStock()
-        this.submit()
+        submitForm()
     }
 
 
@@ -28,19 +28,9 @@ class Stocks extends Component {
     }
 
     submit(){
-        let form = document.querySelector('.stocks-form')
-        form.addEventListener('submit',event=>{
-            event.preventDefault();
-            let json = {};
-            let elements = [...event.target.elements]
-            elements.forEach(el=>{
-                if(el['name']){
-                    json[el.name] = el.value
-                }
-            })
-           this.props.submitStock(json)
-           this.props.getStock()
-         
+        submitForm('.stocks-form',(json)=>{
+            this.props.submitStock(json)
+            this.props.getStock()
         })
     }
 
