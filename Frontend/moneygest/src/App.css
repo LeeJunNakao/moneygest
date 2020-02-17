@@ -157,15 +157,29 @@ body{
 
 .home-container{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
 }
 
 .home-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-content: flex-start;
+  align-content: center;
   justify-self: center;
+}
+
+.stock-chart{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.table-container{
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
 .stock-item{
@@ -214,32 +228,31 @@ body{
 }
 
 table{
-  background-color: white ;
+  background-color: #e1f2fb ;
   border-spacing: 0;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .table-head{
-  background-color: black;
+  background-color: #ea7ad7;
   color: white;
 }
 
 .th{
   width: 100px;
+  height: 40px;
 }
 
 .table td{
   text-align: center;
+  padding: 10px;
 }
 
-.tbody tr:nth-child(2n){
-  background-color: rgba(226,226,226,1);
-}
+
 
 .stocks-form{
-  
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 50px;
   flex-wrap: wrap;
 }
 

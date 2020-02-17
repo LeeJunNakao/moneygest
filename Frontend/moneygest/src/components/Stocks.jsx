@@ -12,7 +12,7 @@ class Stocks extends Component {
 
     componentDidMount(){
         this.props.getStock()
-        submitForm()
+        this.submit();
     }
 
 
@@ -20,9 +20,9 @@ class Stocks extends Component {
         date = date.split('T')
         date = date[0]
         date = date.split('-')
-        let day = date[2]
-        let month = date[1]
-        let year = date[0]
+        const day = date[2]
+        const month = date[1]
+        const year = date[0]
        
          return  `${day}/${month}/${year}`
     }

@@ -9,6 +9,7 @@ import thunk from 'redux-thunk'
 import ReduxToastr from 'react-redux-toastr'
 import Manager from './components/Manager'
 
+import './assets/css/grafico.css'
 import './App.css';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 

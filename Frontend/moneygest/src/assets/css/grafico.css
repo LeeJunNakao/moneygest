@@ -1,0 +1,47 @@
+/* Esse css utiliza de uma fonta externa, deve ser informado
+no html o link: <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> */
+
+.piechart-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.piechart-title{    
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.content-container{
+    display: flex;
+}
+
+.piechart-captionBox{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.caption-line{
+    display: flex;
+    margin: 5px;
+    min-width: 200px;
+    height: 20px;
+    
+}
+
+.colorbox{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    align-self: center;
+}
+.namebox{
+    margin-left: 10px;
+}
+
+.valuesbox{
+    margin-left: 10px;
+}

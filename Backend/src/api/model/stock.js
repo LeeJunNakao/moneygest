@@ -3,7 +3,7 @@ const restful = require('node-restful');
 
 const StockSchema = new mongoose.Schema({
     user:{type: String, required: true},
-    stockName: {type: String, required: true},
+    stockName: {type: String, required: true, uppercase: true},
     quantity: {type: Number, required: true},
     value: {type: Number, required: true, min: 0},
     operation: {type: String, required: true, uppercase: true,

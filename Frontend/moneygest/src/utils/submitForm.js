@@ -5,7 +5,8 @@ export default (form, callback) => {
             const json = {};
             [...event.target.elements].forEach(el => {
                 if (el['name']) {
-                    json[el.name] = el.value
+                    json[el.name] = el.value;
+                    el.value="";
                 }
             });
             callback(json);
